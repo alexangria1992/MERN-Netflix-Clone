@@ -1,0 +1,16 @@
+.listItem {
+  width: 225px;
+  height: 120px;
+  background-color: var(--main-color);
+  margin-right: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.listItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=listitem.css.map */
