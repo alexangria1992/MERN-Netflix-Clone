@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 var colors = require("colors");
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth.js");
+const userRoute = require("./routes/users.js");
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ mongoose
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
 
 app.listen(8800, () => {
   console.log("Backend server is running!".brightCyan);
