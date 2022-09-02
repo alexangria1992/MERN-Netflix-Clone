@@ -1,12 +1,12 @@
 import React from "react";
 import "./watch.scss";
-import { ArrowBackOutlined } from "@material-ui/icons";
+import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 
 export default function Watch() {
   return (
     <div className="watch">
       <div className="back">
-        <ArrowBackOutlined />
+        <ArrowBackOutlinedIcon />
         Home
       </div>
       <video
