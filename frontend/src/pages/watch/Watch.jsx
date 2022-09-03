@@ -1,21 +1,22 @@
 import React from "react";
 import "./watch.scss";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Watch() {
+  const location = useLocation();
+  const movie = location.movie;
+  console.log(location);
   return (
     <div className="watch">
-      <div className="back">
-        <ArrowBackOutlinedIcon />
-        Home
-      </div>
-      <video
-        className="video"
-        autoPlay
-        progress
-        controls
-        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-      />
+      <Link to="/">
+        <div className="back">
+          <ArrowBackOutlinedIcon />
+          Home
+        </div>
+      </Link>
+
+      <video className="video" autoPlay progress controls src={movie.video} />
     </div>
   );
 }
