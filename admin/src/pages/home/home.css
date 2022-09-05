@@ -2,3 +2,8 @@
   flex: 4;
   /* background-color: red; */
 }
+
+.homeWidgets{
+  display: flex;
+  margin: 20px;
+}
