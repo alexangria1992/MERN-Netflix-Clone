@@ -32,15 +32,14 @@
   align-items: center;
   border-radius: 10px;
   /* background-color: red; */
-
 }
 
-.sidebarListItem.active, .sidebarListItem:hover {
-    background-color: rgb(228,228,250);
-
+.sidebarListItem.active,
+.sidebarListItem:hover {
+  background-color: rgb(228, 228, 250);
 }
 
 .sidebarIcon {
-    margin-right: 5px;
-    font-size: 20px !important;;
+  margin-right: 5px;
+  font-size: 20px !important;
 }
