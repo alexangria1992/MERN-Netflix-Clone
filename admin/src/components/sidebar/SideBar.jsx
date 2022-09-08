@@ -14,6 +14,7 @@ import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import ReportIcon from "@mui/icons-material/Report";
+import PlayCircleFilledWhiteOutlinedIcon from "@mui/icons-material/PlayCircleFilledWhiteOutlined";
 import { Link } from "react-router-dom";
 
 export default function SideBar() {
@@ -47,19 +48,19 @@ export default function SideBar() {
                 Users
               </li>
             </Link>
-            <Link to="/products" className="link">
+            <Link to="/movies" className="link">
               <li className="sidebarListItem">
-                <StorefrontIcon />
-                Products
+                <PlayCircleFilledWhiteOutlinedIcon className="sidebarIcon" />
+                Movies
               </li>
             </Link>
 
             <li className="sidebarListItem">
-              <AttachMoneyIcon />
+              <AttachMoneyIcon className="sidebarIcon" />
               Transactions
             </li>
             <li className="sidebarListItem">
-              <BarChartIcon />
+              <BarChartIcon className="sidebarIcon" />
               Reports
             </li>
           </ul>
@@ -69,15 +70,15 @@ export default function SideBar() {
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem ">
-              <MailOutlineOutlinedIcon />
+              <MailOutlineOutlinedIcon className="sidebarIcon" />
               Mail
             </li>
             <li className="sidebarListItem">
-              <DynamicFeedIcon />
+              <DynamicFeedIcon className="sidebarIcon" />
               Feedback
             </li>
             <li className="sidebarListItem">
-              <ChatBubbleOutlineOutlinedIcon />
+              <ChatBubbleOutlineOutlinedIcon className="sidebarIcon" />
               Messages
             </li>
           </ul>
@@ -87,15 +88,15 @@ export default function SideBar() {
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem ">
-              <WorkOutlineOutlinedIcon />
+              <WorkOutlineOutlinedIcon className="sidebarIcon" />
               Manage
             </li>
             <li className="sidebarListItem">
-              <TimelineIcon />
+              <TimelineIcon className="sidebarIcon" />
               Analytics
             </li>
             <li className="sidebarListItem">
-              <ReportIcon />
+              <ReportIcon className="sidebarIcon" />
               Reports
             </li>
           </ul>
