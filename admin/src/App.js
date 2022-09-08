@@ -14,43 +14,51 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import Login from "./pages/login/Login";
+import { AuthContext } from "./context/authContext/AuthContext";
 
 function App() {
+  const { user } = useContext(AuthContext);
+
   return (
     <Router>
       <Switch>
         <Route path="/login">
+          {user ? <Redirect to="/" /> : <Login />}
           <Login />
         </Route>
-        <Topbar />
-        <div className="container">
-          <SideBar />
-          <Route exact path="/">
-            <Home />
-          </Route>
+        {user && (
+          <>
+            <Topbar />
+            <div className="container">
+              <SideBar />
+              <Route exact path="/">
+                <Home />
+              </Route>
 
-          <Route path="/users">
-            <UserList />
-          </Route>
-          <Route path="/user/:userId">
-            <User />
-          </Route>
-          <Route path="/newUser">
-            <NewUser />
-          </Route>
-          <Route path="/products/:productsId">
-            <Product />
-          </Route>
-          <Route path="/movies">
-            <ProductList />
-          </Route>
-          <Route path="/newproduct">
-            <NewProduct />
-          </Route>
-        </div>
+              <Route path="/users">
+                <UserList />
+              </Route>
+              <Route path="/user/:userId">
+                <User />
+              </Route>
+              <Route path="/newUser">
+                <NewUser />
+              </Route>
+              <Route path="/products/:productsId">
+                <Product />
+              </Route>
+              <Route path="/movies">
+                <ProductList />
+              </Route>
+              <Route path="/newproduct">
+                <NewProduct />
+              </Route>
+            </div>
+          </>
+        )}
       </Switch>
     </Router>
   );
