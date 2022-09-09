@@ -14,8 +14,7 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
-import { useContext, useEffect, useMemo, useState } from "react";
-import axios from "axios";
+import { useContext } from "react";
 import Login from "./pages/login/Login";
 import { AuthContext } from "./context/authContext/AuthContext";
 
